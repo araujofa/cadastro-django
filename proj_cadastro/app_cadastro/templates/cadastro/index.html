@@ -15,7 +15,8 @@
 
             <img class="image" src="{% static 'authentication-animate.svg' %}">
 
-            <form action="" method="post">
+            <form action="{% url 'sucesso_cadastro' %}" method="post">
+                {% csrf_token %}
                 <div class="register-form">
 
                     <h1>Cadastre-se</h1>

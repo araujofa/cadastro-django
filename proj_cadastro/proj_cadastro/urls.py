@@ -21,4 +21,6 @@ from app_cadastro import views
 urlpatterns = [
     # Caminho da rota (url, view, nome de referencia)
     path('', views.index, name='index'),
+
+    path('sucesso', views.sucesso, name='sucesso_cadastro'),
 ]

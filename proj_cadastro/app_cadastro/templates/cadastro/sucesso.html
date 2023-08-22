@@ -4,18 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sucesso!</title>
+    <link rel="stylesheet" href="{% static 'css/sucesso.css' %}">
+    <title>Lista Usuarios</title>
 </head>
 <body>
-    <h1>ajdadka</h1>
-    <table>
-        <tr>
+
+    <div id="table">
+
+        <h1>Usuarios cadastrados: </h1>
+        
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+            </tr>
+
             {% for usuario in usuarios %}
-
-            <td>{{usuario.nome}}</td>
-
+                <tr>
+                    <td>{{usuario.nome}}</td>
+                    <td>{{usuario.email}}</td>
+                </tr>
             {% endfor %}
-        </tr>
-    </table>
+
+        </table>
+    </div>
+    
+
 </body>
 </html>

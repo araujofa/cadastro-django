@@ -9,16 +9,18 @@ def sucesso(request):
     usuario = Usuarios()
 
     if request.method == 'POST':
+
         usuario.nome = request.POST.get('nome')
         usuario.email = request.POST.get('email')
         usuario.senha = request.POST.get('senha')
+
     else:
         return False
          
     usuario.save()
 
     usuarios = {
-        'usuarios': Usuarios.objects.all().delete()
+        'usuarios': Usuarios.objects.all()
     }
 
     return render(request, 'cadastro/sucesso.html', usuarios)

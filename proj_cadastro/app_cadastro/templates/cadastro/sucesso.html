@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/sucesso.css' %}">
+    <script src="https://kit.fontawesome.com/f0a141e5be.js" crossorigin="anonymous"></script>
     <title>Lista Usuarios</title>
 </head>
 <body>
@@ -15,18 +16,23 @@
         
         <table>
             <tr>
+                <th>ID</th>
                 <th>Nome</th>
                 <th>E-mail</th>
             </tr>
 
             {% for usuario in usuarios %}
                 <tr>
+                    <td>{{usuario.id_usuario}}</td>
                     <td>{{usuario.nome}}</td>
                     <td>{{usuario.email}}</td>
                 </tr>
             {% endfor %}
 
         </table>
+
+        <a href="{% url 'index' %}"><i class="fa-solid fa-chevron-right"></i> Voltar para a pagina de cadastro</a>
+
     </div>
     
 
